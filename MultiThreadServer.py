@@ -40,7 +40,7 @@ def clientthread(connectionSocket):
                 #Fill in end            
         serverSocket.close
 while True:
-    connectionSocket, addr = skerverSocket.accept()
+    connectionSocket, addr = serverSocket.accept()
     print('Connection Established with ' + addr[0] + ":" + str(addr[1])
     _thread.start_new_thread(clientthread, args )
 
